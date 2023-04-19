@@ -193,7 +193,7 @@ export default {
     getMirror(link) {
       const $x2js = new x2js();
       const url = link.replace(
-        "https://submirror.xyz",
+        "https://mirror.xyz",
         "https://web3.4everblog.org"
       );
       this.axios
@@ -203,7 +203,6 @@ export default {
           const mirrorObj = $x2js.xml2js(data);
           this.mirrorObj = mirrorObj;
           this.mirrorList = mirrorObj.rss.channel.item;
-          console.log(mirrorObj);
         })
         .catch((error) => {
           console.log(error);
@@ -258,6 +257,7 @@ export default {
 .home {
   background-color: #f9fbfc;
   padding-bottom: 100px;
+  min-height: 92vh;
   .head {
     .banner {
       background-image: url("@/assets/banner.png");

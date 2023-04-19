@@ -30,7 +30,7 @@ html {
   font-size: 14px;
   color: #6c7789;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
