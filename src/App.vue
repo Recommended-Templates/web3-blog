@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <router-view />
+    <div id="mintFooter" class="container">
+      Powered by
+      <a href="https://4everland.org/" target="_blank" style="margin-left: 10px"
+        >4EVERLAND</a
+      >
+    </div>
   </div>
 </template>
 
@@ -13,20 +15,30 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background-color: #f9fbfc;
+}
+#mintFooter {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  font-size: 14px;
+  color: #6c7789;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    font-size: 14px;
+    color: #2a7eed;
+    text-decoration: none;
   }
 }
 </style>
